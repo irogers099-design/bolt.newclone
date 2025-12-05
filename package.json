@@ -8,15 +8,15 @@
   "type": "module",
   "scripts": {
     "deploy": "npm run build && wrangler pages deploy",
-    "build": "remix vite:build",
-    "dev": "remix vite:dev",
-    "test": "vitest --run",
-    "test:watch": "vitest",
-    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "build": "npx remix vite:build",
+    "dev": "npx remix vite:dev",
+    "test": "npx vitest --run",
+    "test:watch": "npx vitest",
+    "lint": "npx eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "start": "bindings=$(./bindings.sh) && wrangler pages dev ./build/client $bindings",
-    "typecheck": "tsc",
-    "typegen": "wrangler types",
+    "start": "bindings=$(./bindings.sh) && npx wrangler pages dev ./build/client $bindings",
+    "typecheck": "npx tsc",
+    "typegen": "npx wrangler types",
     "preview": "pnpm run build && pnpm run start"
   },
   "engines": {
