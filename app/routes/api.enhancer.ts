@@ -17,6 +17,7 @@ async function enhancerAction({ context, request }: ActionFunctionArgs) {
     const result = await streamText(
       [
         {
+          id: crypto.randomUUID(),
           role: 'user',
           content: stripIndents`
           I want you to improve the user prompt that is wrapped in \`<original_prompt>\` tags.
